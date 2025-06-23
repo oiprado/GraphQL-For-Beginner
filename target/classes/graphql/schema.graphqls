@@ -1,0 +1,37 @@
+type Query {
+#    firstQuery: String
+#    findAuthor: Author
+#    findAuthor2(firstName: String, lastName: String, phone: String): Author
+    student(id: Int): StudentResponse
+    students : [StudentResponse]
+}
+
+type Author {
+    firstName: String
+    lastName: String
+    phone: String!
+}
+
+type StudentResponse {
+    id : Int
+    firstName : String
+    lastName : String
+    email : String
+    street : String
+    city : String
+    learningSubjects( subjectNameFilter: SubjectNameFilter): [SubjectResponse]
+    fullName : String
+}
+
+enum SubjectNameFilter {
+    All,
+    Java
+    MySQL,
+    MongoDB
+}
+
+type SubjectResponse {
+    id: Int
+    subjectName: String
+    marksObtained: Float
+}

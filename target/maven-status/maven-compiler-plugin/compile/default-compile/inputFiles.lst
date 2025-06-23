@@ -1,0 +1,15 @@
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/GraphQLWithSpringBootApplication.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/configuration/Properties.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/controller/StudentResource.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/model/Address.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/model/Author.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/model/Student.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/model/Subject.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/query/Query.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/repository/AddressRepository.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/repository/StudentRepository.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/repository/SubjectRepository.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/resolver/SubjectResolver.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/response/RequiredFieldAnnotation.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/response/StudentResponse.java
+/Users/oscar.prado/Downloads/First-GraphQL-With-Spring-Boot-App/src/main/java/com/example/demo/response/SubjectResponse.java
