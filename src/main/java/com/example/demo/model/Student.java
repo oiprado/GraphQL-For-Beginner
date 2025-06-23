@@ -1,13 +1,20 @@
 package com.example.demo.model;
 
+import com.example.demo.request.CreateStudentRequest;
+import com.example.demo.response.StudentResponse;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "student")
+@Builder(builderMethodName = "internalBuilder")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,4 +36,14 @@ public class Student {
 
     @OneToMany(mappedBy = "student")
     private List<Subject> learningSubjects;
+
+
+    public static Student.StudentBuilder builder(CreateStudentRequest request) {
+
+        return internalBuilder()
+                .firstName(request.getFirstName())
+                .lastName(request.getLastName())
+                .email(request.getEmail());
+    }
+
 }

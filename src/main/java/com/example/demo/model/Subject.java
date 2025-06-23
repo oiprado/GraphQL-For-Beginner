@@ -1,12 +1,18 @@
 package com.example.demo.model;
 
+import com.example.demo.request.CreateStudentRequest;
+import com.example.demo.request.CreateSubjectRequest;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "subject")
+@Builder(builderMethodName = "internalBuilder")
 public class Subject {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,4 +28,12 @@ public class Subject {
     @ManyToOne
     @JoinColumn(name = "student_id")
     private Student student;
+
+
+    public static Subject.SubjectBuilder builder(CreateSubjectRequest request) {
+        return internalBuilder()
+                .subjectName(request.getSubjectName())
+                .marksObtained(request.getMarksObtained());
+    }
+
 }
