@@ -34,7 +34,7 @@ public class StudentService {
         return studentOptional.map(student -> StudentResponse.builder(student).build()).orElse(null);
     }
 
-    public Student create(CreateStudentRequest request) {
+    public StudentResponse create(CreateStudentRequest request) {
 
         Student student = Student.builder(request).build();
 
@@ -58,7 +58,7 @@ public class StudentService {
             subjectRepository.saveAll(subjects);
         }
 
-        return student;
+        return getStudentById(student.getId());
     }
 
 }

@@ -35,8 +35,7 @@ public class StudentQuery {
 
     @MutationMapping
     public StudentResponse createStudent(@Argument CreateStudentRequest request) {
-        return StudentResponse.builder(studentService.create(request)).build();
-
+        return studentService.create(request);
     }
 
 }

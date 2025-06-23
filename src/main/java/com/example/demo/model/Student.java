@@ -19,7 +19,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "first_name")
     private String firstName;
@@ -36,7 +36,6 @@ public class Student {
 
     @OneToMany(mappedBy = "student")
     private List<Subject> learningSubjects;
-
 
     public static Student.StudentBuilder builder(CreateStudentRequest request) {
 

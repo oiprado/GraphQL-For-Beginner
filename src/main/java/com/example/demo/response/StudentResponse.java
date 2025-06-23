@@ -11,7 +11,7 @@ import java.util.List;
 @Builder(builderMethodName = "internalBuilder")
 public class StudentResponse {
 
-    private Long id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String email;

@@ -1,9 +1,24 @@
 type Query {
-#    firstQuery: String
-#    findAuthor: Author
-#    findAuthor2(firstName: String, lastName: String, phone: String): Author
     student(id: Int): StudentResponse
     students : [StudentResponse]
+}
+
+type Mutation {
+    createStudent(request: CreateStudentRequest!): StudentResponse
+}
+
+input CreateStudentRequest {
+    firstName: String
+    lastName: String
+    email: String
+    street: String
+    city: String
+    subjectsLearning: [CreateSubjectRequest]
+}
+
+input CreateSubjectRequest {
+    subjectName: String
+    marksObtained: Float
 }
 
 type Author {
