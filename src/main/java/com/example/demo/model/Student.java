@@ -1,7 +1,6 @@
 package com.example.demo.model;
 
 import com.example.demo.request.CreateStudentRequest;
-import com.example.demo.response.StudentResponse;
 import jakarta.persistence.*;
 import lombok.*;
 
